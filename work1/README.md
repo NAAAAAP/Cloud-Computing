@@ -52,9 +52,101 @@ xshell下载地址： [xshell官方](https://xshell.en.softonic.com/)
 
 点击new，创建新项目
 
-![10](D:\GitHub\work1\image\10.png)
+![](./image/10.png)
 
 写项目名称，描述（这里项目我取名Cloud-Computing）
 
-![11](D:\GitHub\work1\image\11.png)
+![](./image/11.png)
 
+点击创建，就ok了
+
+本地同步
+
+下载**git**→ [Git官网](https://git-scm.com/downloads)
+
+安装完成打开git bash
+
+![](./image/12.png)
+
+输入以下代码生成**.ssh**
+
+```
+$ ssh-keygen-t rsa-C "github邮箱"
+```
+
+直接回车不用管
+
+找到创建在本地的.ssh中的密钥**id_rsa**
+
+![](./image/13.png)
+
+查看并复制其中的密钥，点击github头像中的settings
+
+![](./image/14.png)
+
+点击SSH and GPG keys，并创建New SSH keys
+
+![](./image/15.png)
+
+title随便取，将刚刚复制的密钥粘贴到Key中，并点击添加
+
+![](./image/16.png)
+
+在git bash中输入以下命令同步下名字和邮箱
+
+```
+git config --global usr.name"输入名字（修改）"
+
+git config --global usr.email"输入邮箱（修改）"
+```
+
+接下来在本地创建文件夹作为仓库，在git bash中cd进入仓库，输入
+
+```
+git init
+```
+
+输入完，进入个人主页，点击头像中的**Your repositories**复制刚刚创建项目点的链接
+
+![](./image/17.png)
+
+在git bash输入
+
+```
+git remote add origin `拷贝的项目链接`
+```
+
+在本地创建一个test.txt文件
+
+git bash中输入
+
+```
+git add test.txt
+```
+
+（双引号内为备注）
+
+```
+git commit -m "cloudcomputing"
+git push origin master
+```
+
+就会发现文件已经上传到个人主页上了
+
+
+
+## 本地安装VMware Workstation和CentOS操作系统
+
+安装VMware Workstation
+
+[下载链接](https://my.vmware.com/cn/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0)
+
+安装时一直next就完事咯
+
+下载CentOS
+
+[官网链接](https://www.centos.org/download/)
+
+安装方式和VM一样next就好
+
+![](./image/18.png)
