@@ -138,17 +138,17 @@ docker push 镜像名:tag标签
 
 ![](./image/17.png)
 
-编写mysql.sql
+编写install.sh
 
-![](./image/18.png)
+![](./image/20.png)
 
 编写start.service
 
 ![](./image/19.png)
 
-编写install.sh
+编写mysql.sql（需对其进行修改）
 
-![](./image/20.png)
+![](./image/18.png)
 
 构建镜像
 
@@ -183,8 +183,8 @@ docker exec -it 7c /bin/bash
 
 ![](./image/28.png)
 
-浏览器输入49.235.126.200:8080查看
+浏览器中输入49.235.232.196:8080查看
 
 ![](./image/29.png)
 
-yeah! 完成！！！
+完成！！！
